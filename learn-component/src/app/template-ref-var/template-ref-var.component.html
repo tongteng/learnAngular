@@ -1,0 +1,8 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">模板局部变量</div>
+  <div class="panel-body">
+    <input #name>
+    <p>{{name.value}}</p>
+    <button class="btn btn-success" (click)="getName(name.value)">提交</button> 
+  </div>
+</div>

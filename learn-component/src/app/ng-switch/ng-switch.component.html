@@ -1,0 +1,11 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">[ngSwitch]</div>
+	<div class="panel-body">
+		<div [ngSwitch]="status">
+			<p *ngSwitchCase="0">下载中···</p>
+			<p *ngSwitchCase="1">正在读取···</p>
+			<p *ngSwitchDefault>系统繁忙···</p>
+		</div>
+		<button class="btn btn-success" (click)="changeStatus()">ChangeStatus</button>
+	</div>
+</div>

@@ -1,0 +1,8 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">*ngFor</div>
+  <div class="panel-body">
+    <ul *ngFor="let lover of love; let i = index;">
+      <li>{{i+1}}-{{lover["name"]}}</li>
+    </ul>
+  </div>
+</div>
