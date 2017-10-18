@@ -1,27 +1,14 @@
-# LearnComponent
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.7.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<h3>
+    详细的内容都在分支上
+  </h3>
+  <p>分支上的内容：</p>
+  <ul>
+    <li>template分支，用12个例子全面示范Angular的模板语法</li>
+    <li>communication分支，示范组件之间的通讯</li>
+    <li>lifecycle分支，示范组件的生命周期玩法</li>
+    <li>animation分支，示范动画的玩法</li>
+    <li>dynamic-component分支，示范动态组件的各种玩法</li>
+    <li>shadowdom分支，示范影子DOM的玩法</li>
+    <li>cotentchild分支，示范ContentChild玩法</li>
+    <li>viewchild分支，示范影子ViewChild的玩法</li>
+  </ul>
