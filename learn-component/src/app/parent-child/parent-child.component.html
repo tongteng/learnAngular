@@ -1,0 +1,7 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">第一种：父子之间组件通讯</div>
+  <div class="panel-body">
+    <child #child (follow)="doSomething()" childTitle="我是子组件"></child>
+    <button class="btn btn-success" (click)="child.childFn()">触发一个事件</button>
+  </div>
+</div>
