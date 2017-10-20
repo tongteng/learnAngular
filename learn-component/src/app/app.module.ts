@@ -9,6 +9,9 @@ import { Child1Component } from './father/child-1/child-1.component';
 import { Child2Component } from './life-cycle/child-2/child-2.component';
 import { TestNgContentComponent } from './test-ng-content/test-ng-content.component';
 import { Child3Component } from './test-ng-content/child-3/child-3.component';
+import { ParentComponent } from './parent/parent.component';
+import { Child11Component } from './parent/child-11/child-11.component';
+import { Child22Component } from './parent/child-22/child-22.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { Child3Component } from './test-ng-content/child-3/child-3.component';
     Child2Component,
     TestNgContentComponent,
     Child3Component,
+    ParentComponent,
+    Child11Component,
+    Child22Component,
   ],
   imports: [
     BrowserModule,
