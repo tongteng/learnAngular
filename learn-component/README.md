@@ -1,14 +1,6 @@
-<h3>
-    详细的内容都在分支上
-  </h3>
-  <p>分支上的内容：</p>
-  <ul>
-    <li>template分支，用12个例子全面示范Angular的模板语法</li>
-    <li>communication分支，示范组件之间的通讯</li>
-    <li>lifecycle分支，示范组件的生命周期玩法</li>
-    <li>animation分支，示范动画的玩法</li>
-    <li>dynamic-component分支，示范动态组件的各种玩法</li>
-    <li>shadowdom分支，示范影子DOM的玩法</li>
-    <li>cotentchild分支，示范ContentChild玩法</li>
-    <li>viewchild分支，示范影子ViewChild的玩法</li>
-  </ul>
+注意CSS的渲染模式
+有Native浏览器原生模式，shadow-dom模式
+有Emulate默认模式，仿shadow-dom模式
+还有none模式，就类似不用框架写的样子
+
+使用none模式写出来的Css都是全局作用域的，可以影响到全局的标签，所以开发的时候能尽量使用Native模式，但是存在兼容问题，如果放弃IE就使用
