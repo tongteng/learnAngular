@@ -17,7 +17,7 @@ export class Child1Component implements OnInit {
   }
 
   public doSayHello():void{
-    this.sayHello.emit("sayHello")
+    this.sayHello.emit("Hello");
   }
 
 }

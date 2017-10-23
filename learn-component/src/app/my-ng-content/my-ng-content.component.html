@@ -3,7 +3,16 @@
   <div class="panel-body">
     <child>
       <h3>仝腾是真滴帅！</h3>
-      <child1 title="child1" (click)="doSomething($event)"></child1>
+      <child1 title="child1" (sayHello)="doSomething()"></child1>
+      <child1 title="child2" (sayHello)="doSomething()"></child1>      
+      <child1 title="child3" (sayHello)="doSomething()"></child1>
+      <child1 title="child4" (sayHello)="doSomething()"></child1>
+      <child1 title="child5" (sayHello)="doSomething()"></child1>
+      <child1 title="child6" (sayHello)="doSomething()"></child1>
+      <!-- <child1 title="child2" (click)="doSomething($event)"></child1>
+      <child1 title="child3" (click)="doSomething($event)"></child1>
+      <child1 title="child4" (click)="doSomething($event)"></child1>
+      <child1 title="child5" (click)="doSomething($event)"></child1> -->
       <p>你说的是真滴对！</p>
     </child>
   </div>

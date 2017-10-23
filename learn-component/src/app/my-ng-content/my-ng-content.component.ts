@@ -12,9 +12,8 @@ export class MyNgContentComponent implements OnInit {
   ngOnInit() {
   }
 
-  public doSomething(e):void{
+  public doSomething():void{
     alert("父级事件被触发");
-    console.log(e);
   }
 
 }

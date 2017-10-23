@@ -40,9 +40,48 @@ ng-content内容投射
     this.sayHello.emit("sayHello")
   }
 
-  在父组件调用子组件时，同样绑定一个事件
-  <child1 title="child1" (click)="doSomething($event)"></child1>
+  在父组件调用子组件时，这里绑定sayHello,因为这是自定义的事件，当子级元素点击时，触发该事件。
+  <child1 title="child1" (sayHello)="doSomething($event)"></child1>
   public doSomething(e):void{
     alert("父级事件被触发");
     console.log(e);
   }
+
+
+  那怎么获得被投影组件上面声明的一些变量啦，方法呢
+  我们可以通过ContentChild获取组件
+  首先我们需要引入ContentChild，以及Child1Component
+  
+  import { Component, OnInit, ContentChild } from '@angular/core';
+  import { Child1Component } from '../child1/child1.component';
+  @ContentChild(Child1Component)
+  child1:Child1Component; //然后声明child1为引入进来的被投影的组件
+
+  然后我们可以在ngAfterContentInit()钩子中，对被投影的组件进行编写
+  ngAfterContentInit():void {
+    console.log(this.child1);
+    this.child1.title = "更改后的child1";
+    this.child1.sayHello.subscribe((param)=>{
+      console.log("接收到触发时的param" + param);
+    })
+    // this.child1.doSayHello();
+
+  }
+
+  当投影的组件非常多的时候，我们可以通过ContentChildren获取组件，
+  我们需要引入ContentChildren以及QueryList
+  import{ContentChildren, QueryList} from '...'
+  @ContentChildren(Child1Component)
+  child1List:QueryList<Child1Component>
+  这样我们就获取到了所有组件在childList中
+
+  然后我们可以在ngAfterContentInit()钩子中，对被投影的组件进行编写
+  this.childList.forEach((childItem) => {
+      childItem.sayHello.subscribe((param)=>{
+        console.log(childItem.title);
+      })
+    })
+
+
+    这个是ContentChild，，ViewChild与ContentChild完全一样，不过使用的钩子是ngAfterViewInit()
+    并且在钩子中不能改变属性
