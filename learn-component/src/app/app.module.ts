@@ -15,6 +15,7 @@ import { Child1Component } from './dyn-component/child-1/child-1.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[Child1Component]
 })
 export class AppModule { }
